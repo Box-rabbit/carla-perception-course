@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+  <route id="my_scenario" town="Town05">
+    <weather cloudiness="0" precipitation="0" sun_altitude_angle="70" />
+
+    <waypoint x="-0.06" y="-94.89" z="0.00" />
+    <waypoint x="-25.85" y="-94.93" z="0.00" />
+    <waypoint x="-99.60" y="-145.61" z="0.06" />
+    <waypoint x="-135.03" y="-145.89" z="0.06" />
+    <waypoint x="-195.09" y="-59.83" z="0.06" />
+    <waypoint x="-195.08" y="-19.76" z="0.06" />
+    <waypoint x="-154.12" y="6.42" z="0.00" />
+    <waypoint x="-106.45" y="6.31" z="0.00" />
+    <waypoint x="-69.09" y="6.22" z="0.00" />
+    <waypoint x="-54.27" y="66.09" z="0.06" />
+    <waypoint x="7.96" y="95.08" z="0.00" />
+    <waypoint x="24.56" y="126.77" z="0.00" />
+    <waypoint x="24.54" y="176.29" z="0.00" />
+    <waypoint x="-23.24" y="187.57" z="0.66" />
+    <waypoint x="-104.37" y="187.61" z="8.17" />
+    <waypoint x="-225.97" y="46.65" z="10.00" />
+    <waypoint x="-129.36" y="-186.62" z="10.02" />
+    <waypoint x="7.81" y="-186.49" z="0.01" />
+    <waypoint x="28.34" y="-164.71" z="0.00" />
+    <waypoint x="26.77" y="-106.23" z="0.00" />
+
+    <scenarios />
+  </route>
+</routes>

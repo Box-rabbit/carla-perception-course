@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+  <route id="my_scenario" town="Town05">
+    <weather cloudiness="0" precipitation="0" sun_altitude_angle="70" />
+    
+    <!-- 关键锚点：起点、几个转弯点、终点 -->
+    <waypoint x="-0.06" y="-94.89" z="0.00" />
+    <waypoint x="-33.55" y="-94.94" z="0.00" />
+    <waypoint x="-105.99" y="-145.66" z="0.06" />
+    <waypoint x="-154.59" y="-146.04" z="0.06" />
+    <waypoint x="-195.10" y="-104.99" z="0.06" />
+    <waypoint x="-195.08" y="-16.52" z="0.06" />
+    <waypoint x="-145.57" y="6.40" z="0.00" />
+    <waypoint x="-65.11" y="6.21" z="0.00" />
+    <waypoint x="-54.31" y="72.10" z="0.06" />
+    <waypoint x="13.10" y="95.08" z="0.00" />
+    <waypoint x="24.54" y="173.58" z="0.00" />
+    <waypoint x="-123.42" y="187.62" z="8.37" />
+    <waypoint x="-226.68" y="96.51" z="9.92" />
+    <waypoint x="-226.63" y="-105.86" z="10.00" />
+    <waypoint x="13.98" y="-186.51" z="0.00" />
+    <waypoint x="26.80" y="-107.33" z="0.00" />
+    
+    <!-- 触发点：按累计距离触发 -->
+    <scenarios>
+      <scenario name="my_pedestrian_crossing" type="MyPedestrianCrossing">
+        <route_progress value="360.0" />
+      </scenario>
+    </scenarios>
+  </route>
+</routes>
+
+

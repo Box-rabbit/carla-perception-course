@@ -1,0 +1,35 @@
+# Runtime output and generated media
+outputs/data_chain/
+outputs/midterm_media/
+outputs/**/*.png
+outputs/**/*.jpg
+outputs/**/*.mp4
+outputs/**/*.jsonl
+
+# Local CARLA distributions and archives
+carla.1013.zip
+CARLA_*/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# Local IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+
+# Temporary logs and local reports
+*.log
+*.tmp
+*.swp
+
+# Keep downloaded upstream repositories as external dependencies in this checkout.
+# The project-owned integration files remain tracked at the root.
+yolov5/.git/
+ufld/.git/

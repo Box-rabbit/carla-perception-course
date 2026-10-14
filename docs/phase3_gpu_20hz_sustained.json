@@ -1,0 +1,75 @@
+{
+  "config": "/data/hdt_workspace/carla-perception/My_scenario/configs/my_scenario_test.yaml",
+  "frequencies_hz": [
+    20.0
+  ],
+  "runs": [
+    {
+      "frequency_hz": 20.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_095541_828387",
+      "frames_processed": 100,
+      "achieved_wall_fps": 11.026643060583519,
+      "real_time_factor": 0.5513321530291759,
+      "frames_received": 101,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 6.004370499867946,
+        "p50": 5.144850998476613,
+        "p95": 9.667209000326693,
+        "max": 23.958300000231247,
+        "over_budget_frames": 0,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 8.64218435031944,
+        "p95": 13.058199001534376,
+        "max": 32.80943500431022
+      },
+      "metrics": {
+        "frames": 100,
+        "frames_with_visible_truth": 100,
+        "tp": 298,
+        "fp": 56,
+        "fn": 2,
+        "matched_iou_sum": 197.48403919785108,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 0.8418079096045198,
+        "recall": 0.9933333333333333,
+        "mean_matched_iou": 0.6626981181135942,
+        "per_class": {
+          "pedestrian": {
+            "truth": 100,
+            "tp": 100,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 77.15063581197167,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7715063581197167
+          },
+          "vehicle": {
+            "truth": 200,
+            "tp": 198,
+            "fp": 56,
+            "fn": 2,
+            "matched_iou_sum": 120.33340338587882,
+            "precision": 0.7795275590551181,
+            "recall": 0.99,
+            "f1": 0.8722466960352423,
+            "mean_matched_iou": 0.6077444615448425
+          }
+        },
+        "f1": 0.91131498470948
+      },
+      "status": "pass"
+    }
+  ],
+  "selection_rule": "highest frequency with aligned frames, no runtime sensor drops, total P95 below its frame period and achieved wall FPS at or above requested Hz"
+}

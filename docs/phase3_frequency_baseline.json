@@ -1,0 +1,333 @@
+{
+  "config": "/data/hdt_workspace/carla-perception/My_scenario/configs/my_scenario_test.yaml",
+  "frequencies_hz": [
+    5.0,
+    8.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "runs": [
+    {
+      "frequency_hz": 5.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_014625_338540",
+      "frames_processed": 10,
+      "frames_received": 11,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 122.9890394002723,
+        "p50": 122.42099900140602,
+        "p95": 127.82447400059027,
+        "max": 129.64168899998185,
+        "over_budget_frames": 10,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 194.95038929981092,
+        "p95": 206.96799500001362,
+        "max": 206.96799500001362
+      },
+      "metrics": {
+        "frames": 10,
+        "frames_with_visible_truth": 10,
+        "tp": 29,
+        "fp": 0,
+        "fn": 1,
+        "matched_iou_sum": 19.47575502362785,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.9666666666666667,
+        "mean_matched_iou": 0.6715777594354432,
+        "per_class": {
+          "pedestrian": {
+            "truth": 10,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 7.6228819469213525,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7622881946921353
+          },
+          "vehicle": {
+            "truth": 20,
+            "tp": 19,
+            "fp": 0,
+            "fn": 1,
+            "matched_iou_sum": 11.8528730767065,
+            "precision": 1.0,
+            "recall": 0.95,
+            "f1": 0.9743589743589743,
+            "mean_matched_iou": 0.6238354250898158
+          }
+        },
+        "f1": 0.983050847457627
+      },
+      "status": "pass_with_latency_over_budget"
+    },
+    {
+      "frequency_hz": 8.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_014634_922021",
+      "frames_processed": 10,
+      "frames_received": 11,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 124.51415759951487,
+        "p50": 124.79536999853735,
+        "p95": 131.6222799996467,
+        "max": 133.51474599949142,
+        "over_budget_frames": 10,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 198.49988379992283,
+        "p95": 204.8769100001664,
+        "max": 204.8769100001664
+      },
+      "metrics": {
+        "frames": 10,
+        "frames_with_visible_truth": 10,
+        "tp": 28,
+        "fp": 0,
+        "fn": 2,
+        "matched_iou_sum": 18.79117589342262,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "mean_matched_iou": 0.6711134247650935,
+        "per_class": {
+          "pedestrian": {
+            "truth": 10,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 7.770925721140142,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7770925721140143
+          },
+          "vehicle": {
+            "truth": 20,
+            "tp": 18,
+            "fp": 0,
+            "fn": 2,
+            "matched_iou_sum": 11.020250172282479,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526316,
+            "mean_matched_iou": 0.6122361206823599
+          }
+        },
+        "f1": 0.9655172413793104
+      },
+      "status": "pass_with_latency_over_budget"
+    },
+    {
+      "frequency_hz": 10.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_014644_648477",
+      "frames_processed": 10,
+      "frames_received": 11,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 121.75219229993672,
+        "p50": 117.80403500051762,
+        "p95": 129.49063800078875,
+        "max": 141.17005100160895,
+        "over_budget_frames": 10,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 191.84548889934376,
+        "p95": 217.71980800076562,
+        "max": 217.71980800076562
+      },
+      "metrics": {
+        "frames": 10,
+        "frames_with_visible_truth": 10,
+        "tp": 22,
+        "fp": 0,
+        "fn": 8,
+        "matched_iou_sum": 14.83213481195416,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.7333333333333333,
+        "mean_matched_iou": 0.6741879459979164,
+        "per_class": {
+          "pedestrian": {
+            "truth": 10,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 7.713827877704047,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7713827877704047
+          },
+          "vehicle": {
+            "truth": 20,
+            "tp": 12,
+            "fp": 0,
+            "fn": 8,
+            "matched_iou_sum": 7.118306934250112,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999,
+            "mean_matched_iou": 0.5931922445208427
+          }
+        },
+        "f1": 0.846153846153846
+      },
+      "status": "pass_with_latency_over_budget"
+    },
+    {
+      "frequency_hz": 15.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_014654_313507",
+      "frames_processed": 10,
+      "frames_received": 11,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 125.25313879959867,
+        "p50": 125.07752700003039,
+        "p95": 131.55323599858093,
+        "max": 134.67807300003187,
+        "over_budget_frames": 10,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 197.90441099994496,
+        "p95": 209.73181600129465,
+        "max": 209.73181600129465
+      },
+      "metrics": {
+        "frames": 10,
+        "frames_with_visible_truth": 10,
+        "tp": 30,
+        "fp": 0,
+        "fn": 0,
+        "matched_iou_sum": 19.658812748291407,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 1.0,
+        "mean_matched_iou": 0.6552937582763803,
+        "per_class": {
+          "pedestrian": {
+            "truth": 10,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 7.689680727944873,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7689680727944873
+          },
+          "vehicle": {
+            "truth": 20,
+            "tp": 20,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 11.969132020346535,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.5984566010173268
+          }
+        },
+        "f1": 1.0
+      },
+      "status": "pass_with_latency_over_budget"
+    },
+    {
+      "frequency_hz": 20.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_014703_986224",
+      "frames_processed": 10,
+      "frames_received": 11,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 126.28523030034557,
+        "p50": 126.23075100054848,
+        "p95": 130.83876500058977,
+        "max": 133.675408000272,
+        "over_budget_frames": 10,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 198.57780119964445,
+        "p95": 211.43517699965741,
+        "max": 211.43517699965741
+      },
+      "metrics": {
+        "frames": 10,
+        "frames_with_visible_truth": 10,
+        "tp": 27,
+        "fp": 0,
+        "fn": 3,
+        "matched_iou_sum": 18.252525417467485,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.9,
+        "mean_matched_iou": 0.6760194599062032,
+        "per_class": {
+          "pedestrian": {
+            "truth": 10,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 7.7770544789017695,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7777054478901769
+          },
+          "vehicle": {
+            "truth": 20,
+            "tp": 17,
+            "fp": 0,
+            "fn": 3,
+            "matched_iou_sum": 10.475470938565714,
+            "precision": 1.0,
+            "recall": 0.85,
+            "f1": 0.9189189189189189,
+            "mean_matched_iou": 0.6162041728568067
+          }
+        },
+        "f1": 0.9473684210526316
+      },
+      "status": "pass_with_latency_over_budget"
+    }
+  ],
+  "selection_rule": "highest frequency with aligned frames and no dropped sensor frames; latency is reported separately"
+}

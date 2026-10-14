@@ -1,0 +1,36 @@
+# Sensor contract. These names are the only camera IDs used by the runtime.
+# Intrinsics/extrinsics are maintained separately in calibration/ after
+# installation and calibration. Do not use simulator actor IDs as camera IDs.
+schema_version: sensor-contract-1.0
+
+defaults:
+  blueprint: sensor.camera.rgb
+  image_size_px: [1280, 720]
+  fov_deg: 90.0
+  transform:
+    x_m: 1.5
+    y_m: 0.0
+    z_m: 1.4
+    roll_deg: 0.0
+    pitch_deg: -5.0
+    yaw_deg: 0.0
+
+sensors:
+  front_rgb:
+    enabled: true
+    calibration_file: calibration/front_rgb.json
+    calibration_status: validated_high_precision_projection
+
+  stereo_left:
+    enabled: false
+    transform:
+      y_m: -0.10
+    calibration_file: calibration/stereo.json
+    calibration_status: pending
+
+  stereo_right:
+    enabled: false
+    transform:
+      y_m: 0.10
+    calibration_file: calibration/stereo.json
+    calibration_status: pending

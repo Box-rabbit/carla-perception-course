@@ -1,0 +1,343 @@
+{
+  "config": "/data/hdt_workspace/carla-perception/My_scenario/configs/my_scenario_test.yaml",
+  "frequencies_hz": [
+    5.0,
+    8.0,
+    10.0,
+    15.0,
+    20.0
+  ],
+  "runs": [
+    {
+      "frequency_hz": 5.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_095629_852697",
+      "frames_processed": 50,
+      "achieved_wall_fps": 10.928170293515544,
+      "real_time_factor": 2.185634058703109,
+      "frames_received": 51,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 5.765483000286622,
+        "p50": 5.164717003935948,
+        "p95": 8.196016002329998,
+        "max": 24.268137996841688,
+        "over_budget_frames": 0,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 8.217158999323146,
+        "p95": 10.534191998885944,
+        "max": 29.831072999513708
+      },
+      "metrics": {
+        "frames": 50,
+        "frames_with_visible_truth": 50,
+        "tp": 136,
+        "fp": 0,
+        "fn": 14,
+        "matched_iou_sum": 91.25262559814564,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.9066666666666666,
+        "mean_matched_iou": 0.6709751882216591,
+        "per_class": {
+          "pedestrian": {
+            "truth": 50,
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 38.86305985184633,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7772611970369266
+          },
+          "vehicle": {
+            "truth": 100,
+            "tp": 86,
+            "fp": 0,
+            "fn": 14,
+            "matched_iou_sum": 52.38956574629933,
+            "precision": 1.0,
+            "recall": 0.86,
+            "f1": 0.924731182795699,
+            "mean_matched_iou": 0.6091809970499923
+          }
+        },
+        "f1": 0.9510489510489509
+      },
+      "status": "pass"
+    },
+    {
+      "frequency_hz": 8.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_095639_562655",
+      "frames_processed": 50,
+      "achieved_wall_fps": 10.768535333912464,
+      "real_time_factor": 1.346066916739058,
+      "frames_received": 51,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 5.8629489796294365,
+        "p50": 5.249863002973143,
+        "p95": 9.721024995087646,
+        "max": 10.212497996690217,
+        "over_budget_frames": 0,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 8.633175181457773,
+        "p95": 13.369646003411617,
+        "max": 16.175124001165386
+      },
+      "metrics": {
+        "frames": 50,
+        "frames_with_visible_truth": 50,
+        "tp": 141,
+        "fp": 0,
+        "fn": 9,
+        "matched_iou_sum": 95.15278745194873,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.94,
+        "mean_matched_iou": 0.6748424641982179,
+        "per_class": {
+          "pedestrian": {
+            "truth": 50,
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 39.284097352895955,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.785681947057919
+          },
+          "vehicle": {
+            "truth": 100,
+            "tp": 91,
+            "fp": 0,
+            "fn": 9,
+            "matched_iou_sum": 55.86869009905274,
+            "precision": 1.0,
+            "recall": 0.91,
+            "f1": 0.9528795811518325,
+            "mean_matched_iou": 0.6139416494401401
+          }
+        },
+        "f1": 0.9690721649484536
+      },
+      "status": "pass"
+    },
+    {
+      "frequency_hz": 10.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_095649_335982",
+      "frames_processed": 50,
+      "achieved_wall_fps": 10.829581869068793,
+      "real_time_factor": 1.0829581869068794,
+      "frames_received": 51,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 5.520966900076019,
+        "p50": 5.081447998236399,
+        "p95": 8.553231004043482,
+        "max": 15.337580000050366,
+        "over_budget_frames": 0,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 7.9543687592376955,
+        "p95": 12.925115996040404,
+        "max": 24.8647050029831
+      },
+      "metrics": {
+        "frames": 50,
+        "frames_with_visible_truth": 50,
+        "tp": 123,
+        "fp": 0,
+        "fn": 27,
+        "matched_iou_sum": 83.02944659394103,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.82,
+        "mean_matched_iou": 0.6750361511702523,
+        "per_class": {
+          "pedestrian": {
+            "truth": 50,
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 38.91470817478,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7782941634956001
+          },
+          "vehicle": {
+            "truth": 100,
+            "tp": 73,
+            "fp": 0,
+            "fn": 27,
+            "matched_iou_sum": 44.114738419160986,
+            "precision": 1.0,
+            "recall": 0.73,
+            "f1": 0.8439306358381503,
+            "mean_matched_iou": 0.6043114851939861
+          }
+        },
+        "f1": 0.9010989010989011
+      },
+      "status": "pass"
+    },
+    {
+      "frequency_hz": 15.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_095659_215279",
+      "frames_processed": 50,
+      "achieved_wall_fps": 10.898707988209464,
+      "real_time_factor": 0.7265805325472976,
+      "frames_received": 51,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 5.643413339275867,
+        "p50": 5.049421000876464,
+        "p95": 9.998294997785706,
+        "max": 12.102699998649769,
+        "over_budget_frames": 0,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 8.233393940172391,
+        "p95": 15.064455001265742,
+        "max": 24.61224100261461
+      },
+      "metrics": {
+        "frames": 50,
+        "frames_with_visible_truth": 50,
+        "tp": 138,
+        "fp": 0,
+        "fn": 12,
+        "matched_iou_sum": 91.1578692068357,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 1.0,
+        "recall": 0.92,
+        "mean_matched_iou": 0.6605642696147515,
+        "per_class": {
+          "pedestrian": {
+            "truth": 50,
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 38.17660136466683,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.7635320272933366
+          },
+          "vehicle": {
+            "truth": 100,
+            "tp": 88,
+            "fp": 0,
+            "fn": 12,
+            "matched_iou_sum": 52.981267842168904,
+            "precision": 1.0,
+            "recall": 0.88,
+            "f1": 0.9361702127659575,
+            "mean_matched_iou": 0.6020598618428284
+          }
+        },
+        "f1": 0.9583333333333334
+      },
+      "status": "pass"
+    },
+    {
+      "frequency_hz": 20.0,
+      "episode": "/data/hdt_workspace/carla-perception/outputs/data_chain/town05_data_chain_20261014_095709_024603",
+      "frames_processed": 50,
+      "achieved_wall_fps": 10.750702773878098,
+      "real_time_factor": 0.5375351386939049,
+      "frames_received": 51,
+      "frames_dropped": 0,
+      "frames_discarded_stale": 1,
+      "frames_unprocessed_after_run": 1,
+      "frames_unaccounted": 0,
+      "frame_alignment": "pass",
+      "truth_isolation": "pass",
+      "inference_latency_ms": {
+        "mean": 6.020518760342384,
+        "p50": 5.366230005165562,
+        "p95": 9.83987999643432,
+        "max": 9.862211998552084,
+        "over_budget_frames": 0,
+        "budget_ms": 50.0
+      },
+      "total_latency_ms": {
+        "mean": 8.777698140620487,
+        "p95": 13.551967997045722,
+        "max": 14.998945000115782
+      },
+      "metrics": {
+        "frames": 50,
+        "frames_with_visible_truth": 50,
+        "tp": 146,
+        "fp": 30,
+        "fn": 4,
+        "matched_iou_sum": 95.99684522668363,
+        "iou_threshold": 0.5,
+        "evaluation_status": "ok",
+        "precision": 0.8295454545454546,
+        "recall": 0.9733333333333334,
+        "mean_matched_iou": 0.6575126385389289,
+        "per_class": {
+          "pedestrian": {
+            "truth": 50,
+            "tp": 50,
+            "fp": 0,
+            "fn": 0,
+            "matched_iou_sum": 37.65196201694225,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mean_matched_iou": 0.753039240338845
+          },
+          "vehicle": {
+            "truth": 100,
+            "tp": 96,
+            "fp": 30,
+            "fn": 4,
+            "matched_iou_sum": 58.344883209741376,
+            "precision": 0.7619047619047619,
+            "recall": 0.96,
+            "f1": 0.8495575221238937,
+            "mean_matched_iou": 0.6077592001014727
+          }
+        },
+        "f1": 0.8957055214723927
+      },
+      "status": "pass"
+    }
+  ],
+  "selection_rule": "highest frequency with aligned frames, no runtime sensor drops, total P95 below its frame period and achieved wall FPS at or above requested Hz"
+}

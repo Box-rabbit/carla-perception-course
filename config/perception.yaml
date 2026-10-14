@@ -1,0 +1,17 @@
+# Model settings belong to the perception side and are not scenario inputs.
+yolov5:
+  enabled: true
+  weights: yolov5/yolov5s.pt
+  # auto selects CUDA when it is available, otherwise CPU. Use "cuda:0" for
+  # a strict GPU requirement; an unavailable explicit CUDA device is an error.
+  device: auto
+  half: true
+  image_size: 640
+  confidence_threshold: 0.40
+  iou_threshold: 0.45
+  max_detections: 300
+  debug_output: false
+  tracking:
+    enabled: true
+    iou_threshold: 0.30
+    max_missed_frames: 3

@@ -1,0 +1,121 @@
+{
+  "schema_version": "front-rgb-projection-validation-0.1",
+  "camera_id": "front_rgb",
+  "map": "Carla/Maps/Town05",
+  "captured_frame": 46,
+  "target_frame_requested": 46,
+  "reference": "tight red validation target pixels in the RGB image",
+  "image_size_px": [
+    1280,
+    720
+  ],
+  "calibration_file": "/data/hdt_workspace/carla-perception/calibration/front_rgb.json",
+  "K": [
+    [
+      640.0,
+      0.0,
+      639.5
+    ],
+    [
+      0.0,
+      640.0,
+      359.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "sensor_transform": {
+    "location": {
+      "x": -166.23216247558594,
+      "y": -95.14412689208984,
+      "z": 1.4015023708343506
+    },
+    "rotation": {
+      "roll": 4.1847406095918416e-10,
+      "pitch": -4.999998569488525,
+      "yaw": -179.9136962890625
+    }
+  },
+  "max_center_error_px": 4.632589589564763,
+  "pass": true,
+  "thresholds": {
+    "max_center_error_px": 5.0
+  },
+  "measurements": [
+    {
+      "target": "target_01",
+      "placement_m": {
+        "forward": 12.0,
+        "right": -3.5
+      },
+      "projected_bbox_px": {
+        "left": 296.0002978476663,
+        "top": 304.9270460261244,
+        "right": 513.0117264163313,
+        "bottom": 410.3223622050347
+      },
+      "observed_red_bbox_px": {
+        "left": 320,
+        "top": 321,
+        "right": 498,
+        "bottom": 392,
+        "pixel_count": 5653
+      },
+      "status": "ok",
+      "center_error_px": 4.632589589564763,
+      "bbox_iou": 0.5525536271282903
+    },
+    {
+      "target": "target_02",
+      "placement_m": {
+        "forward": 20.0,
+        "right": 0.0
+      },
+      "projected_bbox_px": {
+        "left": 600.4419498036774,
+        "top": 303.69420810620323,
+        "right": 678.5209468758869,
+        "bottom": 358.27872159690725
+      },
+      "observed_red_bbox_px": {
+        "left": 604,
+        "top": 316,
+        "right": 675,
+        "bottom": 349,
+        "pixel_count": 1496
+      },
+      "status": "ok",
+      "center_error_px": 1.5136488396172134,
+      "bbox_iou": 0.5497542793200408
+    },
+    {
+      "target": "target_03",
+      "placement_m": {
+        "forward": 30.0,
+        "right": 3.5
+      },
+      "projected_bbox_px": {
+        "left": 691.8552961881833,
+        "top": 302.98452552136627,
+        "right": 748.9000326488906,
+        "bottom": 336.9083692664324
+      },
+      "observed_red_bbox_px": {
+        "left": 695,
+        "top": 311,
+        "right": 746,
+        "bottom": 331,
+        "pixel_count": 629
+      },
+      "status": "ok",
+      "center_error_px": 1.0606314573466984,
+      "bbox_iou": 0.5270836436824734
+    }
+  ],
+  "debug_image": "/data/hdt_workspace/carla-perception/outputs/calibration_validation/front_rgb/20261011_153514_158500/front_rgb.png",
+  "truth_log_written": false,
+  "perception_log_written": false
+}

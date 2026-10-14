@@ -1,0 +1,14 @@
+{
+  "schema_version": "stereo-pinhole-calibration-0.1",
+  "camera_model": "opencv_pinhole",
+  "image_size_px": [null, null],
+  "K_left": [[null, 0, null], [0, null, null], [0, 0, 1]],
+  "D_left": [null, null, null, null, null],
+  "K_right": [[null, 0, null], [0, null, null], [0, 0, 1]],
+  "D_right": [null, null, null, null, null],
+  "R_left_to_right": [[null, null, null], [null, null, null], [null, null, null]],
+  "T_left_to_right_m": [null, null, null],
+  "translation_unit": "m",
+  "extrinsic_convention": "X_right=R_left_to_right@X_left+T_left_to_right_m",
+  "source_description": "Replace null values with verified camera calibration or simulator sensor geometry; do not guess."
+}

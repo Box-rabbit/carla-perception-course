@@ -1,0 +1,68 @@
+{
+  "status": "pass_with_latency_over_budget",
+  "frames": 100,
+  "json_interface": "pass",
+  "truth_isolation": "pass",
+  "frame_alignment": "pass",
+  "latency_ms": {
+    "mean": 8.246432569649187,
+    "p50": 5.078324997157324,
+    "p95": 9.931093001796398,
+    "max": 262.2796679934254,
+    "over_budget_frames": 1,
+    "budget_ms": 50.0
+  },
+  "device": {
+    "requested": [
+      "remote"
+    ],
+    "actual": [
+      "cuda:0"
+    ],
+    "precision": [
+      "fp16"
+    ]
+  },
+  "metrics": {
+    "frames": 100,
+    "frames_with_visible_truth": 100,
+    "tp": 285,
+    "fp": 44,
+    "fn": 15,
+    "matched_iou_sum": 188.9964226539097,
+    "iou_threshold": 0.5,
+    "evaluation_status": "ok",
+    "precision": 0.8662613981762918,
+    "recall": 0.95,
+    "mean_matched_iou": 0.6631453426452971,
+    "per_class": {
+      "pedestrian": {
+        "truth": 100,
+        "tp": 100,
+        "fp": 0,
+        "fn": 0,
+        "matched_iou_sum": 77.1949029576966,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "mean_matched_iou": 0.771949029576966
+      },
+      "vehicle": {
+        "truth": 200,
+        "tp": 185,
+        "fp": 44,
+        "fn": 15,
+        "matched_iou_sum": 111.80151969621275,
+        "precision": 0.8078602620087336,
+        "recall": 0.925,
+        "f1": 0.8624708624708626,
+        "mean_matched_iou": 0.6043325388984473
+      }
+    },
+    "f1": 0.9062003179650238
+  },
+  "debug_images": {
+    "raw": 0,
+    "annotated": 0
+  }
+}

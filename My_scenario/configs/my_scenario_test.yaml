@@ -1,0 +1,200 @@
+scenario_id: my_scenario
+version: v0.2
+map:
+  town: Town05
+  weather: ClearNoon
+ego:
+  vehicle_type: vehicle.tesla.model3
+  spawn_point:
+    x: -20.178
+    y: -94.924
+    z: 0.3
+    yaw: -179.9
+route:
+  mode: route_xml
+  route_file: routes/my_scenario_test.xml
+controller:
+  initial_target_speed_kmh: 50
+  cruise_target_speed_kmh: 50
+  lookahead_m: 12.0
+  steer_gain: 1.25
+  max_steer: 0.46
+traffic_lights:
+  mode: natural_cycle
+  detection_range_m: 50.0
+  cycle:
+    green_time_s: 20.0
+    red_time_s: 20.0
+    yellow_time_s: 3.0
+  perception_eval:
+    enabled: true
+instructions:
+- id: slow_lead_vehicle_01
+  trigger:
+    type: route_distance
+    value: 110.0
+  task: lead_vehicle
+  lead_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    distance_ahead_m: 30.0
+    lateral_offset_m: -3.5
+    speed_kmh: 10.0
+    hand_brake: false
+    follow_waypoints: true
+- id: slow_lead_vehicle_02
+  trigger:
+    type: route_distance
+    value: 115.0
+  task: lead_vehicle
+  lead_vehicle:
+    model: vehicle.bmw.grandtourer
+    fallback_filter: vehicle.*
+    distance_ahead_m: 35.0
+    lateral_offset_m: -7
+    speed_kmh: 15.0
+    hand_brake: false
+    follow_waypoints: true
+- id: slow_lead_vehicle_03
+  trigger:
+    type: route_distance
+    value: 117.0
+  task: lead_vehicle
+  lead_vehicle:
+    model: vehicle.mercedes.coupe
+    fallback_filter: vehicle.*
+    distance_ahead_m: 40.0
+    lateral_offset_m: 3.5
+    speed_kmh: 0
+    hand_brake: false
+    follow_waypoints: true
+- id: crossing_pedestrian_right
+  trigger:
+    type: route_distance
+    value: 180.0
+  task: crossing_pedestrian
+  pedestrian:
+    model: walker.pedestrian.0001
+    fallback_filter: walker.pedestrian.*
+    distance_ahead_m: 18.0
+    start_lateral_offset_m: 3.5
+    end_lateral_offset_m: -3.5
+    speed_mps: 1.4
+- id: crossing_pedestrian_left
+  trigger:
+    type: route_distance
+    value: 183.0
+  task: crossing_pedestrian
+  pedestrian:
+    model: walker.pedestrian.0002
+    fallback_filter: walker.pedestrian.*
+    distance_ahead_m: 22.0
+    start_lateral_offset_m: -3.5
+    end_lateral_offset_m: 3.5
+    speed_mps: 1.2
+- id: crossing_pedestrian_center
+  trigger:
+    type: route_distance
+    value: 186.0
+  task: crossing_pedestrian
+  pedestrian:
+    model: walker.pedestrian.0003
+    fallback_filter: walker.pedestrian.*
+    distance_ahead_m: 26.0
+    start_lateral_offset_m: 1.0
+    end_lateral_offset_m: -1.0
+    speed_mps: 1.0
+- id: merge_conflict_01
+  trigger:
+    type: route_distance
+    value: 200.0
+  task: merge_conflict
+  conflict_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    placement: left_side_road
+    distance_ahead_m: 28.0
+    lateral_offset_m: -12.0
+    yaw_delta_deg: 90.0
+    speed_kmh: 22.0
+    follow_waypoints: true
+- id: slow_lead_vehicle_01
+  trigger:
+    type: route_distance
+    value: 850.0
+  task: lead_vehicle
+  lead_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    distance_ahead_m: 30.0
+    lateral_offset_m: 0.0
+    speed_kmh: 0.0
+    hand_brake: true
+- id: faster_lead_vehicle_01
+  trigger:
+    type: route_distance
+    value: 1080.0
+  task: lead_vehicle
+  lead_vehicle:
+    model: vehicle.tesla.model3
+    fallback_filter: vehicle.*
+    distance_ahead_m: 35.0
+    lateral_offset_m: 0.0
+    speed_kmh: 0.0
+    hand_brake: true
+- id: blocked_lane_02
+  trigger:
+    type: route_distance
+    value: 1450.0
+  task: blocked_lane
+  obstacle:
+    model: vehicle.carlamotors.carlacola
+    fallback_filter: vehicle.*
+    distance_ahead_m: 40.0
+    lateral_offset_m: 0.0
+    hand_brake: true
+- id: junction_conflict_02
+  trigger:
+    type: route_distance
+    value: 1510.0
+  task: junction_conflict
+  disable_traffic_lights: true
+  traffic_light_radius_m: 70.0
+  conflict_vehicle:
+    model: vehicle.nissan.patrol
+    fallback_filter: vehicle.*
+    distance_ahead_m: 24.0
+    lateral_offset_m: -10.0
+    yaw_delta_deg: 90.0
+    speed_kmh: 18.0
+    follow_waypoints: true
+    destroy_after_progress_m: 70.0
+- id: merge_conflict_02
+  trigger:
+    type: route_distance
+    value: 1550.0
+  task: merge_conflict
+  conflict_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    distance_ahead_m: 30.0
+    lateral_offset_m: -7.0
+    yaw_delta_deg: 0.0
+    speed_kmh: 18.0
+- id: final_stop_01
+  trigger:
+    type: route_distance
+    value: 1600.0
+  task: final_stop
+  stop_area:
+    distance_ahead_m: 25.0
+    target_speed_kmh: 0.0
+    hold_seconds: 2.0
+actors:
+  pedestrians: []
+  vehicles: []
+  static_props: []
+success_criteria:
+  no_collision: true
+  route_completion_min: 0.95
+  final_stop_required: true

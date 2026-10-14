@@ -1,0 +1,198 @@
+scenario_id: my_scenario
+version: v0.1
+map:
+  town: Town05
+  weather: ClearNoon
+ego:
+  vehicle_type: vehicle.tesla.model3
+  spawn_point:
+    x: -20.178
+    y: -94.924
+    z: 0.3
+    yaw: -179.9
+route:
+  mode: route_xml
+  route_file: routes/my_scenario.xml
+controller:
+  initial_target_speed_kmh: 50
+  cruise_target_speed_kmh: 50
+  lookahead_m: 12.0
+  steer_gain: 1.25
+  max_steer: 0.46
+  traffic_light_stop_distance_m: 25.0
+  traffic_light_stop_speed_kmh: 2.0
+traffic_lights:
+  cycle:
+    green_time_s: 20.0
+    red_time_s: 20.0
+    yellow_time_s: 3.0
+instructions:
+- id: green_light_01
+  trigger:
+    type: route_distance
+    value: 15.0
+  task: traffic_light
+  traffic_light_ids:
+  - 102
+  - 103
+  traffic_light_state: green
+- id: red_light_01
+  trigger:
+    type: route_distance
+    value: 100.0
+  task: traffic_light
+  traffic_light_ids:
+  - 95
+  - 106
+  - 107
+  traffic_light_state: red
+- id: pedestrian_crossing_01
+  trigger:
+    type: route_distance
+    value: 180.0
+  task: pedestrian_crossing
+  pedestrian:
+    model: walker.pedestrian.0001
+    fallback_filter: walker.pedestrian.*
+    start_lateral_offset_m: 5.0
+    end_lateral_offset_m: -5.0
+- id: lane_change_01
+  trigger:
+    type: route_distance
+    value: 285.0
+  task: lane_change
+  lane_change:
+    direction: left
+    target_lateral_offset_m: -3.5
+- id: red_light_02
+  trigger:
+    type: route_distance
+    value: 305.0
+  task: traffic_light
+  traffic_light_ids:
+  - 61
+  - 62
+  traffic_light_state: red
+- id: yellow_light_01
+  trigger:
+    type: route_distance
+    value: 385.0
+  task: traffic_light
+  traffic_light_ids:
+  - 63
+  - 84
+  traffic_light_state: yellow
+- id: pedestrian_crossing_02
+  trigger:
+    type: route_distance
+    value: 435.0
+  task: pedestrian_crossing
+  pedestrian:
+    model: walker.pedestrian.0002
+    fallback_filter: walker.pedestrian.*
+    start_lateral_offset_m: 5.0
+    end_lateral_offset_m: -5.0
+- id: green_light_02
+  trigger:
+    type: route_distance
+    value: 460.0
+  task: traffic_light
+  traffic_light_ids:
+  - 65
+  traffic_light_state: green
+- id: red_light_03
+  trigger:
+    type: route_distance
+    value: 530.0
+  task: traffic_light
+  traffic_light_ids:
+  - 110
+  traffic_light_state: red
+- id: green_light_03
+  trigger:
+    type: route_distance
+    value: 620.0
+  task: traffic_light
+  traffic_light_ids:
+  - 111
+  traffic_light_state: green
+- id: merge_01
+  trigger:
+    type: route_distance
+    value: 660.0
+  task: merge
+  merge_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    speed_kmh: 15.0
+- id: right_turn_no_light_01
+  trigger:
+    type: route_distance
+    value: 710.0
+  task: right_turn_no_light
+  traffic_light_ids:
+  - 112
+- id: pedestrian_crossing_03
+  trigger:
+    type: route_distance
+    value: 760.0
+  task: pedestrian_crossing
+  pedestrian:
+    model: walker.pedestrian.0003
+    fallback_filter: walker.pedestrian.*
+    start_lateral_offset_m: 5.0
+    end_lateral_offset_m: -5.0
+- id: slow_overtake_01
+  trigger:
+    type: route_distance
+    value: 850.0
+  task: overtake
+  target_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    speed_kmh: 10.0
+- id: high_speed_overtake_01
+  trigger:
+    type: route_distance
+    value: 1080.0
+  task: overtake
+  target_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    speed_kmh: 25.0
+- id: lane_change_02
+  trigger:
+    type: route_distance
+    value: 1450.0
+  task: lane_change
+  lane_change:
+    direction: right
+    target_lateral_offset_m: 0.0
+- id: right_turn_no_light_02
+  trigger:
+    type: route_distance
+    value: 1500.0
+  task: right_turn_no_light
+  traffic_light_ids:
+  - 113
+- id: merge_02
+  trigger:
+    type: route_distance
+    value: 1530.0
+  task: merge
+  merge_vehicle:
+    model: vehicle.audi.tt
+    fallback_filter: vehicle.*
+    speed_kmh: 15.0
+- id: park_01
+  trigger:
+    type: route_distance
+    value: 1550.0
+  task: park
+actors:
+  pedestrians: []
+  vehicles: []
+  static_props: []
+success_criteria:
+  no_collision: true
+  route_completion_min: 0.95

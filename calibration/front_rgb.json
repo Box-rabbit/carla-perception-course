@@ -1,0 +1,22 @@
+{
+  "schema_version": "carla-rgb-pinhole-calibration-0.1",
+  "camera_id": "front_rgb",
+  "camera_model": "opencv_pinhole",
+  "image_size_px": [1280, 720],
+  "field_of_view": {
+    "axis": "horizontal",
+    "degrees": 90.0
+  },
+  "K": [
+    [640.0, 0.0, 639.5],
+    [0.0, 640.0, 359.5],
+    [0.0, 0.0, 1.0]
+  ],
+  "D": [0.0, 0.0, 0.0, 0.0, 0.0],
+  "intrinsics_source": "derived_from_carla_sensor_camera_rgb_fov_and_resolution",
+  "extrinsics_source": "config/sensors.yaml:sensors.front_rgb.transform relative to ego",
+  "distortion_assumption": "CARLA sensor.camera.rgb pinhole camera; no lens distortion model configured",
+  "validation_status": "validated_high_precision_projection",
+  "validation_report": "outputs/calibration_validation/front_rgb/20261011_153514_158500/report.json",
+  "notes": "High precision projection validation in CARLA Town05 used three red vehicle targets at 12m/-3.5m, 20m/0m and 30m/3.5m relative to ego. The exact-frame RGB image was compared against the projected 3D bounding boxes using tight target ROIs; center errors were 4.63, 1.51 and 1.06 px, with a maximum of 4.63 px under a 5 px acceptance threshold. This validates the CARLA virtual camera projection, not a physical camera calibration."
+}

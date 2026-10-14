@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+  <route id="my_scenario" town="Town05">
+    <weather cloudiness="0" precipitation="0" sun_altitude_angle="70" />
+
+    <waypoints>
+      <position x="-0.06" y="-94.89" z="0.00"/>
+      <position x="-25.85" y="-94.89" z="0.00"/>
+      <position x="-50.60" y="-94.89" z="0.00"/>
+      <position x="-60.03" y="-94.89" z="0.00"/>
+      <position x="-85.09" y="-94.89" z="0.00"/>
+      <position x="-150" y="-94.89" z="0.00"/>
+    </waypoints>
+
+    <scenarios>
+        <!-- 先关掉背景交通 -->
+        <scenario name="BackgroundActivityParametrizer_1" type="BackgroundActivityParametrizer">
+            <trigger_point x="-0.06" y="-94.89" z="0.00" yaw="180.0"/>
+            <other_parameters>
+            <num_front_vehicles value="0"/>
+            <num_back_vehicles value="0"/>
+            <opposite_active value="0"/>
+            </other_parameters>
+        </scenario>
+
+        <!-- 你的场景 -->
+        <scenario name="DynamicObjectCrossing_1" type="DynamicObjectCrossing">
+            <trigger_point x="-15.85" y="-94.89" z="0.00" yaw="180.0"/>
+            <distance value="18"/>
+            <direction value="right"/>
+            <blocker_model value="static.prop.streetbarrier"/>
+            <crossing_angle value="7"/>
+        </scenario>
+        <scenario name="DynamicObjectCrossing_2" type="DynamicObjectCrossing">
+            <trigger_point x="-80" y="-94.89" z="0.00" yaw="180.0"/>
+            <distance value="18"/>
+            <direction value="right"/>
+            <blocker_model value="static.prop.streetbarrier"/>
+            <crossing_angle value="7"/>
+        </scenario>
+    </scenarios>
+  </route>
+</routes>

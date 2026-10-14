@@ -1,0 +1,42 @@
+# Project-wide runtime contract. Scenario files contain only scenario-specific
+# actors, triggers and route information.
+project:
+  name: carla_perception_course_design
+  config_version: "1.0"
+  python_version: "3.7"
+
+carla:
+  version: "0.9.15"
+  host: localhost
+  port: 2000
+  python_api_root: null  # set with --carla-root when CARLA is not on PYTHONPATH
+
+runtime:
+  synchronous_mode: true
+  fixed_delta_seconds: 0.05
+  sensor_tick_seconds: 0.05
+  max_duration_seconds: 100.0
+  episode_id_prefix: town05_data_chain
+  random_seed: 42
+  sensor_queue_size: 8
+  # Initial CARLA rendering can take several seconds after loading a map and
+  # spawning actors. Keep the frame contract strict while allowing that first
+  # sensor callback to arrive.
+  sensor_timeout_seconds: 5.0
+  sensor_warmup_ticks: 20
+
+data_contract:
+  frame_id_source: carla_sensor
+  timestamp_source: carla_simulation
+  image_color_order: RGB
+  image_dtype: uint8
+  image_coordinate_frame: image_pixels_x_right_y_down
+  ego_coordinate_frame: ego_vehicle_x_forward_y_right_z_up
+  truth_source: ground_truth
+  model_source: camera_model
+
+paths:
+  output_root: outputs
+  calibration_root: calibration
+  perception_log_name: perception.jsonl
+  truth_log_name: truth.jsonl
